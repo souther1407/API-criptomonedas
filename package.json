@@ -1,0 +1,32 @@
+{
+  "name": "api-criptomonedas",
+  "version": "1.0.0",
+  "description": "Api de criptomonedas",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/souther1407/API-criptomonedas.git"
+  },
+  "keywords": [
+    "API",
+    "criptomonedas",
+    "bitcoin"
+  ],
+  "author": "Eric Casanova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/souther1407/API-criptomonedas/issues"
+  },
+  "homepage": "https://github.com/souther1407/API-criptomonedas#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "coingecko-api": "^1.0.10",
+    "express": "^4.17.3"
+  }
+}
