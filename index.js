@@ -11,16 +11,7 @@ app.use(express.json())
 app.use(express.urlencoded())
 app.use(morgan("dev"))
 
-//Aqui deberia ir el front
-app.get("/", async (req,res)=>{
-    /* let status = await cgClient.ping()
-    res.json(status) */
-    let html = await fs.readFile("./index.html","utf-8")
-    let css = await fs.readFile("./styles.css","utf-8")
-    html=html.replace("/**/",css)
-    res.send(html)
 
-})
 
 
 app.use("/api/coins",coinsRouter,)
