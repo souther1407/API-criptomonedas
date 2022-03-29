@@ -53,13 +53,13 @@ function orderResult(results,type){
     
 
     switch(type){
-        case "perIdAsc":
+        case "byIdAsc":
             return results.sort(perIdAsc)
-        case "perIdDesc":
+        case "byIdDesc":
             return results.sort(perIdDesc)
-        case "perPriceAsc":
+        case "byPriceAsc":
             return results.sort(perPriceAsc)
-        case "perPriceDesc":
+        case "byPriceDesc":
             return results.sort(perPriceDesc)
         default:
             return results
