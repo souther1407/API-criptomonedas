@@ -1,14 +1,15 @@
 const express = require("express")
 const fs = require("fs/promises")
 const {parseCurrencies} = require("./utils")
-
+const morgan = require("morgan")
 
 const app = express()
 
 const coinsRouter = require("./routes/coins")
 
-
-
+app.use(express.json())
+app.use(express.urlencoded())
+app.use(morgan("dev"))
 
 //Aqui deberia ir el front
 app.get("/", async (req,res)=>{
@@ -25,23 +26,7 @@ app.get("/", async (req,res)=>{
 app.use("/api/coins",coinsRouter,)
 
 
-/* app.get("/api/coins",async (req,res)=>{
-    let {page,currency} = req.query
-    let coins = await cgClient.coins.all({page:page ? page : 1})
-    let parsedCoins=parseCurrencies(coins.data,currency ? currency : "usd")
-    res.json(parsedCoins)
-})
 
-
-app.get("/api/coins/:id",async (req,res)=>{
-    let coin = await cgClient.coins.fetch(req.params.id)
-    if(!coin.success){
-        res.json({error:`Cryptocurrency ${req.params.id} not found`})
-    }else{
-        
-        res.json(coin.data)
-    }
-}) */
 
 
 

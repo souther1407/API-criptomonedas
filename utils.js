@@ -15,7 +15,9 @@ function parseCurrencies(data,currency){
         parsedCurrencies.push({
             id:crypto.id,
             name:crypto.name,
-            price:crypto.market_data.current_price[currency]
+            price:crypto.market_data.current_price[currency],
+            image:crypto.image,
+            ranking_market_cap:crypto.market_data.market_cap_rank
         })
     }
     return parsedCurrencies
